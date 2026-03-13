@@ -64,7 +64,7 @@ export function TestimonialsSection() {
             <h2 className="text-[30px] md:text-[34px] leading-tight font-semibold text-white font-['Hind',sans-serif]">
               team365 ... We Deliver.
             </h2>
-            <div className="text-[#d6d6e0] font-['Hind',sans-serif] space-y-2">
+            <div className="!text-white font-['Hind',sans-serif] space-y-2">
               <p className="text-[21px] md:text-[24px] leading-snug">
                 team365 is one of the leading mailing and distribution companies
                 for corporate communication and luxury brand literature.
