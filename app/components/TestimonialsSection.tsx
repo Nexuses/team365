@@ -48,7 +48,7 @@ export function TestimonialsSection() {
   useEffect(() => {
     const t = setInterval(() => {
       goNext();
-    }, 7000);
+    }, 5000);
     return () => clearInterval(t);
   }, [goNext]);
 

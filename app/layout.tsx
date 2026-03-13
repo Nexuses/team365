@@ -43,7 +43,7 @@ export default function RootLayout({
       >
         <ContactInfoHeader />
         <NavigationHeader />
-        <main className="pt-4 md:pt-6">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

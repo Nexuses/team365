@@ -38,7 +38,7 @@ export const NavigationHeader = () => {
   return (
     <header
       className={cn(
-        "relative w-full z-50 transition-all duration-300 bg-white mt-[20px]",
+        "relative w-full z-50 transition-all duration-300 bg-white",
         scrolled ? "py-2" : "py-4"
       )}
     >
