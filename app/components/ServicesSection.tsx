@@ -158,11 +158,11 @@ export function ServicesSection() {
   return (
     <section id="service" className="bg-[#231834] py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 md:px-8 lg:px-8">
-        <h2 className="text-[32px] md:text-[46px] leading-[1.2] font-semibold text-white mb-4 md:mb-5">
+        <h2 className="text-[32px] md:text-[46px] leading-[1.2] font-semibold !text-white mb-4 md:mb-5">
           team365 have worked with, or managed projects for, over{" "}
           <strong>55% of the FTSE 100</strong> companies.
         </h2>
-        <p className="text-[20px] md:text-[28px] leading-[1.68] text-[#d6d6e0] max-w-6xl">
+        <p className="text-[20px] md:text-[28px] leading-[1.68] !text-[#f3f4f6] max-w-6xl">
           Our new business wins have always been via word-of-mouth which is proof
           that we deliver.
         </p>
@@ -192,7 +192,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <p className="text-[22px] md:text-[32px] leading-[1.68] text-[#f3f4f6] mt-12 md:mt-14 mb-[70px]">
+        <p className="text-[22px] md:text-[32px] leading-[1.68] !text-[#f3f4f6] mt-12 md:mt-14 mb-[70px]">
           In addition to financial projects, we also work with global brands
           where we store, pack and distribute marketing brochures and
           promotional materials worldwide.
