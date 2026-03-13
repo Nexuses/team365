@@ -3,7 +3,7 @@
 import React from "react";
 
 const VIDEO_SRC =
-  "https://ik.imagekit.io/nexuses/video/Cars_on_the_Road_Night_time_lapse_-_No_Copyright_Video_-__4K_CrlAU42nn.mp4";
+  "https://nexuses.s3.us-east-2.amazonaws.com/Cars_on_the_Road_Night_time_lapse_-_No_Copyright_Video_-__4K_CrlAU42nn.mp4";
 
 export function WhatMakesUsSpecialSection() {
   return (

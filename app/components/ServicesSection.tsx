@@ -9,7 +9,7 @@ const SERVICES = [
     id: "printing",
     title: "Printing & Personalisation",
     icon: "printing",
-    image: "https://www.team365.co.uk/wp-content/uploads/2019/10/printing.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/printing.jpg",
     description:
       "team365's ancillary document knowledge, gained through years of experience, means that we are able to offer a service that is second-to-none. We guide you through the document design process and advise on the nuances of registrars' requirements. Our clients trust our knowledge and often turn to us to manage the design, printing and personalisation of their proxy cards, and other AGM documents.",
   },
@@ -17,7 +17,7 @@ const SERVICES = [
     id: "distribution",
     title: "Worldwide Distribution",
     icon: "distribution",
-    image: "https://www.team365.co.uk/wp-content/uploads/2019/10/footer-lonodn.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/footer-lonodn.jpg",
     description:
       "We have securely packed and despatched complex distribution projects ranging from hybrid bill deposits through to worldwide brand relaunches and time-sensitive product launches. Our experience of delivering into international destinations means we advise on potential pitfalls and timings. We keep you up-to-date at all stages of your distribution project and provide a proof-of-delivery schedule on project completion.",
   },
@@ -25,7 +25,7 @@ const SERVICES = [
     id: "storage",
     title: "Storage and Inventory",
     icon: "storage",
-    image: "https://www.team365.co.uk/wp-content/uploads/2019/11/Storage-and-Inventory-Control-.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/Storage-and-Inventory-Control-.jpg",
     description:
       "With office rentals at a premium many of our clients turn to us to store their backdated corporate communication, and brand literature and marketing products. We pick, pack and dispatch any requests to UK and worldwide destinations and our state-of-the-art inventory control ensures accurate and up-to-date stock reports.",
   },
@@ -33,7 +33,7 @@ const SERVICES = [
     id: "data",
     title: "Data Processing",
     icon: "data",
-    image: "https://www.team365.co.uk/wp-content/uploads/2019/12/Data-Processing.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/Data-Processing__1_.jpg",
     description:
       "Due to the complex nature of many of the projects we handle, our data processors are experienced in writing bespoke programmes and combining this with current industry software. So knowledgeable are our programmers that we are often asked by Registrars to advise other mailing houses how to manage and manipulate their data!",
   },
@@ -41,7 +41,7 @@ const SERVICES = [
     id: "project",
     title: "Project Management",
     icon: "project",
-    image: "https://www.team365.co.uk/wp-content/uploads/2019/10/Project-mgt.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/Project-mgt.jpg",
     description:
       "Our exceptional team of experienced account managers will guide you through every stage of your project—no matter how complex—to ensure it runs smoothly, accurately, and delivers exactly what you need. We are large enough to manage substantial mailing and distribution campaigns, yet small enough to remain flexible and provide a truly personal service that sets us apart. Every project is treated as unique, and we work closely with you to create a bespoke solution that achieves your goals efficiently and effectively.",
   },
@@ -49,7 +49,7 @@ const SERVICES = [
     id: "polywrapping",
     title: "Postage",
     icon: "postage",
-    image: "https://www.team365.co.uk/wp-content/uploads/2020/01/img32.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/img32.jpg",
     description:
       "Our team of experts will advise the most cost-effective and efficient postal service for your project using our network of UK and global postal providers.",
   },
@@ -57,7 +57,7 @@ const SERVICES = [
     id: "enclosing",
     title: "Enclosing",
     icon: "enclosing",
-    image: "https://www.team365.co.uk/wp-content/uploads/2019/12/envelop.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/envelop.jpg",
     description:
       "We advise the most suitable way of enclosing your project taking budget and timings into account.",
   },
@@ -65,7 +65,7 @@ const SERVICES = [
     id: "pickup",
     title: "Picking & Packing",
     icon: "pickup",
-    image: "https://www.team365.co.uk/wp-content/uploads/2020/02/pick.jpg",
+    image: "https://nexuses.s3.us-east-2.amazonaws.com/pick.jpg",
     description:
       "Whether we are picking and packing from existing client stock we hold or for a one-off project, each request is tailored to meet clients' needs and hand-packed with the utmost care to ensure the product arrives securely at the final destination.",
   },
@@ -213,15 +213,18 @@ export function ServicesSection() {
           aria-labelledby={`modal-title-${s.id}`}
         >
           <div
-            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto shadow-xl"
+            className="bg-white rounded-lg w-full max-w-[980px] h-[90vh] max-h-[90vh] md:h-[620px] md:max-h-[620px] overflow-hidden shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex">
-              <div
-                className="hidden md:block w-1/2 min-h-[200px] bg-cover bg-center"
-                style={{ backgroundImage: `url(${s.image})` }}
-              />
-              <div className="flex-1 p-6 md:p-8">
+            <div className="flex h-full">
+              <div className="hidden md:block w-1/2 h-full">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 p-6 md:p-8 h-full overflow-y-auto">
                 <div className="flex justify-between items-start gap-4">
                   <h3
                     id={`modal-title-${s.id}`}

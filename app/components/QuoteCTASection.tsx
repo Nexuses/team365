@@ -3,7 +3,7 @@
 import React from "react";
 
 const BG_IMAGE =
-  "https://www.team365.co.uk/wp-content/uploads/2019/11/footer.jpg";
+  "https://nexuses.s3.us-east-2.amazonaws.com/footer.jpg";
 
 export function QuoteCTASection() {
   return (

@@ -3,7 +3,7 @@
 import React from "react";
 
 const BANNER_IMAGE =
-  "https://www.team365.co.uk/wp-content/uploads/2019/12/addition-team365-copy.jpg";
+  "https://nexuses.s3.us-east-2.amazonaws.com/addition-team365-copy.jpg";
 
 export function ImageBannerSection() {
   return (

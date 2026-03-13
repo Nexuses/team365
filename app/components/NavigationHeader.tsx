@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const LOGO_URL =
-  "https://www.team365.co.uk/wp-content/uploads/2019/10/logo-nobg-1.png";
+  "https://nexuses.s3.us-east-2.amazonaws.com/logo-nobg-1.png";
 const PRIMARY_COLOR = "#9e5f98";
 const TEXT_COLOR = "#171717";
 

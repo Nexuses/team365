@@ -3,7 +3,7 @@
 import React from "react";
 
 const LOGO_URL =
-  "https://www.team365.co.uk/wp-content/uploads/2019/10/logo-nobg-1.png";
+  "https://nexuses.s3.us-east-2.amazonaws.com/logo-nobg-1.png";
 const MAP_EMBED =
   "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d39725.57372133723!2d0.070229!3d51.515998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c8fb5ddc3c893b7!2sTeam365!5e0!3m2!1sen!2sus!4v1570446562799!5m2!1sen!2sus";
 
