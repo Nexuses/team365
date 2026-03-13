@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "team365 - Managing the distribution and mailing for corporate",
   description:
     "team365 is one of the leading mailing and distribution companies for shareholder and corporate communications.",
+  icons: {
+    icon: "https://nexuses.s3.us-east-2.amazonaws.com/logo-nobg-1.png",
+    shortcut: "https://nexuses.s3.us-east-2.amazonaws.com/logo-nobg-1.png",
+    apple: "https://nexuses.s3.us-east-2.amazonaws.com/logo-nobg-1.png",
+  },
 };
 
 export default function RootLayout({
