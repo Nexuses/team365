@@ -192,7 +192,7 @@ export function ServicesSection() {
           })}
         </div>
 
-        <p className="text-[22px] md:text-[32px] leading-[1.68] text-white mt-12 md:mt-14 mb-[70px]">
+        <p className="text-[22px] md:text-[32px] leading-[1.68] text-[#f3f4f6] mt-12 md:mt-14 mb-[70px]">
           In addition to financial projects, we also work with global brands
           where we store, pack and distribute marketing brochures and
           promotional materials worldwide.

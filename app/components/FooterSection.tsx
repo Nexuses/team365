@@ -137,7 +137,7 @@ export function FooterSection() {
 
       <section className="bg-[#1f1230] py-3">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-[15px] md:text-[16px] font-semibold text-white">
+          <p className="text-[15px] md:text-[16px] font-semibold text-[#e3afff]">
             2026 © Copyright <strong>team365</strong>. All rights Reserved.
           </p>
         </div>
