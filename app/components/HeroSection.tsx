@@ -32,7 +32,7 @@ export function HeroSection() {
         <div className="max-w-4xl">
           <h1
             className={cn(
-              "text-5xl sm:text-6xl md:text-7xl lg:text-[125px] font-semibold leading-[1.1] text-white",
+              "text-5xl sm:text-6xl md:text-7xl lg:text-[125px] font-semibold leading-[1.1] !text-white",
               "font-['Hind',sans-serif]"
             )}
           >
@@ -40,7 +40,7 @@ export function HeroSection() {
           </h1>
           <p
             className={cn(
-              "mt-2 text-xl sm:text-2xl md:text-[26px] leading-snug text-white max-w-2xl",
+              "mt-2 text-xl sm:text-2xl md:text-[26px] leading-snug !text-white max-w-2xl",
               "font-['Hind',sans-serif]"
             )}
           >

@@ -31,10 +31,10 @@ export function WhatMakesUsSpecialSection() {
       </div>
 
       <div className="relative z-20 container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 md:mb-8">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold !text-white mb-6 md:mb-8">
           What Make Us Special?
         </h2>
-        <p className="text-base md:text-lg text-white max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg !text-white max-w-3xl mx-auto leading-relaxed">
           Our team cares. We manage the process, anticipate pitfalls and
           constantly feed back progress to ensure the successful completion of
           your mailing and distribution project. This is the key to our
