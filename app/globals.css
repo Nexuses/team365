@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes service-icon-draw-loop {
+  0% {
+    stroke-dashoffset: 140;
+  }
+  85% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.service-svg * {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.service-svg > * {
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: service-icon-draw-loop 1.8s linear infinite;
+}
+
+/* Stagger each SVG stroke so it draws start -> end sequentially */
+.service-svg > *:nth-child(1) {
+  animation-delay: 0ms;
+}
+.service-svg > *:nth-child(2) {
+  animation-delay: 70ms;
+}
+.service-svg > *:nth-child(3) {
+  animation-delay: 140ms;
+}
+.service-svg > *:nth-child(4) {
+  animation-delay: 210ms;
+}
+.service-svg > *:nth-child(5) {
+  animation-delay: 280ms;
+}
+.service-svg > *:nth-child(6) {
+  animation-delay: 350ms;
+}
+.service-svg > *:nth-child(7) {
+  animation-delay: 420ms;
+}
+.service-svg > *:nth-child(8) {
+  animation-delay: 490ms;
+}
+.service-svg > *:nth-child(9) {
+  animation-delay: 560ms;
+}
+.service-svg > *:nth-child(10) {
+  animation-delay: 630ms;
+}
+
+.service-card:hover .service-svg > * {
+  animation-duration: 1.2s;
+}
