@@ -39,7 +39,7 @@ export const NavigationHeader = () => {
     <header
       className={cn(
         "relative w-full z-50 transition-all duration-300 bg-white mt-[20px]",
-        scrolled ? "py-2 shadow-md" : "py-4"
+        scrolled ? "py-2" : "py-4"
       )}
     >
       <div className="container mx-auto px-4 md:px-8 lg:px-12">

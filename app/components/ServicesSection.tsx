@@ -213,7 +213,7 @@ export function ServicesSection() {
           aria-labelledby={`modal-title-${s.id}`}
         >
           <div
-            className="bg-white rounded-lg w-full max-w-[980px] h-[90vh] max-h-[90vh] md:h-[620px] md:max-h-[620px] overflow-hidden shadow-xl"
+            className="bg-white rounded-lg w-full max-w-[980px] h-[72vh] max-h-[72vh] md:h-[440px] md:max-h-[440px] overflow-hidden shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex h-full">
@@ -224,26 +224,28 @@ export function ServicesSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="flex-1 p-6 md:p-8 h-full overflow-y-auto">
-                <div className="flex justify-between items-start gap-4">
-                  <h3
-                    id={`modal-title-${s.id}`}
-                    className="text-2xl md:text-3xl font-semibold text-black"
-                  >
-                    {s.title}
-                  </h3>
-                  <button
-                    type="button"
-                    onClick={() => setOpenId(null)}
-                    className="p-2 text-gray-500 hover:text-black"
-                    aria-label="Close"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
+              <div className="flex-1 p-6 md:p-8 h-full overflow-y-auto flex flex-col justify-center">
+                <div>
+                  <div className="flex justify-between items-start gap-4">
+                    <h3
+                      id={`modal-title-${s.id}`}
+                      className="text-2xl md:text-3xl font-semibold text-black"
+                    >
+                      {s.title}
+                    </h3>
+                    <button
+                      type="button"
+                      onClick={() => setOpenId(null)}
+                      className="p-2 text-gray-500 hover:text-black"
+                      aria-label="Close"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+                  </div>
+                  <p className="mt-4 text-base md:text-lg text-[#1a1a1a] leading-relaxed">
+                    {s.description}
+                  </p>
                 </div>
-                <p className="mt-4 text-base md:text-lg text-[#1a1a1a] leading-relaxed">
-                  {s.description}
-                </p>
               </div>
             </div>
           </div>
