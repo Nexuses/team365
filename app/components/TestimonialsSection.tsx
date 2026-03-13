@@ -46,11 +46,12 @@ export function TestimonialsSection() {
   }, []);
 
   useEffect(() => {
-    const t = setInterval(() => {
-      goNext();
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+      setDirection(1);
     }, 5000);
-    return () => clearInterval(t);
-  }, [goNext]);
+    return () => clearInterval(timer);
+  }, []);
 
   const leftIndex = (index - 1 + TESTIMONIALS.length) % TESTIMONIALS.length;
   const centerIndex = index;
@@ -65,11 +66,11 @@ export function TestimonialsSection() {
               team365 ... We Deliver.
             </h2>
             <div className="!text-white font-['Hind',sans-serif] space-y-2">
-              <p className="text-[21px] md:text-[24px] leading-snug">
+              <p className="text-[21px] md:text-[24px] leading-snug !text-white">
                 team365 is one of the leading mailing and distribution companies
                 for corporate communication and luxury brand literature.
               </p>
-              <p className="text-[21px] md:text-[24px] leading-snug mb-[80px]">
+              <p className="text-[21px] md:text-[24px] leading-snug mb-[80px] !text-white">
                 As our testimonials demonstrate, we are renowned for our high
                 levels of service and reporting.
               </p>
