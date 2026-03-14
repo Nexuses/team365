@@ -32,7 +32,7 @@ export function FooterSection() {
                 className="h-12 md:h-20 w-auto object-contain mb-5"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-[0.95fr_1.05fr] gap-6 text-[#2f2f2f]">
+              <div className="grid grid-cols-1 md:grid-cols-[0.95fr_1.05fr] gap-6 !text-[#2f2f2f]">
                 <div>
                   <p className="text-[#8d4f92] font-semibold text-[20px] leading-none mb-2">
                     Equipe52 Ltd t/a team365
@@ -67,13 +67,13 @@ export function FooterSection() {
               <div className="flex gap-4 mt-6">
                 <Link
                   href="/privacy-policy"
-                  className="text-[15px] text-[#555] hover:text-[#9e5f98]"
+                  className="text-[15px] !text-[#555] hover:text-[#9e5f98]"
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   href="/sitemap"
-                  className="text-[15px] text-[#555] hover:text-[#9e5f98]"
+                  className="text-[15px] !text-[#555] hover:text-[#9e5f98]"
                 >
                   Site Map
                 </Link>
@@ -81,7 +81,7 @@ export function FooterSection() {
             </div>
 
             <div>
-              <h4 className="text-[#2f1d3d] font-semibold text-[18px] md:text-[20px] leading-none mb-4">
+              <h4 className="!text-[#2f1d3d] font-semibold text-[18px] md:text-[20px] leading-none mb-4">
                 Our Services
               </h4>
               <ul className="space-y-2">
@@ -89,7 +89,7 @@ export function FooterSection() {
                   <li key={label}>
                     <a
                       href="#service"
-                      className="text-[#3a3a3a] hover:text-[#9e5f98] text-[15px] leading-none"
+                      className="!text-[#3a3a3a] hover:text-[#9e5f98] text-[15px] leading-none"
                     >
                       {label}
                     </a>
@@ -99,7 +99,7 @@ export function FooterSection() {
             </div>
 
             <div>
-              <h4 className="text-[#2f1d3d] font-semibold text-[18px] md:text-[20px] leading-none mb-4">
+              <h4 className="!text-[#2f1d3d] font-semibold text-[18px] md:text-[20px] leading-none mb-4">
                 Get In Touch
               </h4>
               <p className="text-[#8d4f92] font-semibold text-[16px] leading-tight">
