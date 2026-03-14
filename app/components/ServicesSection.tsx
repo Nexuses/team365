@@ -213,36 +213,37 @@ export function ServicesSection() {
           aria-labelledby={`modal-title-${s.id}`}
         >
           <div
-            className="bg-white rounded-lg w-full max-w-[980px] h-[72vh] max-h-[72vh] md:h-[440px] md:max-h-[440px] overflow-hidden shadow-xl"
+            className="bg-white rounded-lg w-full max-w-[980px] h-[72vh] max-h-[72vh] md:h-[440px] md:max-h-[440px] overflow-hidden shadow-xl relative"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button Top Right */}
+            <button
+              type="button"
+              onClick={() => setOpenId(null)}
+              className="absolute top-4 right-4 z-10 p-2 bg-[#f3f4f6] hover:bg-[#e5e7eb] text-[#231834] rounded-full transition-colors shadow-sm"
+              aria-label="Close popup"
+            >
+              <X className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2.5} />
+            </button>
+
             <div className="flex h-full">
-              <div className="hidden md:block w-1/2 h-full">
+              <div className="hidden md:block w-1/2 h-full relative">
                 <img
                   src={s.image}
                   alt={s.title}
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-black/10"></div>
               </div>
-              <div className="flex-1 p-6 md:p-8 h-full overflow-y-auto flex flex-col justify-center">
-                <div>
-                  <div className="flex justify-between items-start gap-4">
-                    <h3
-                      id={`modal-title-${s.id}`}
-                      className="text-2xl md:text-3xl font-semibold text-black"
-                    >
-                      {s.title}
-                    </h3>
-                    <button
-                      type="button"
-                      onClick={() => setOpenId(null)}
-                      className="p-2 text-gray-500 hover:text-black"
-                      aria-label="Close"
-                    >
-                      <X className="w-6 h-6" />
-                    </button>
-                  </div>
-                  <p className="mt-4 text-base md:text-lg text-[#1a1a1a] leading-relaxed">
+              <div className="flex-1 p-6 md:p-10 md:pt-12 h-full overflow-y-auto flex flex-col justify-center">
+                <div className="max-w-[420px] mx-auto md:mx-0 pr-2">
+                  <h3
+                    id={`modal-title-${s.id}`}
+                    className="text-[26px] md:text-[32px] font-bold !text-[#231834] mb-4 leading-tight font-['Hind',sans-serif]"
+                  >
+                    {s.title}
+                  </h3>
+                  <p className="text-[17px] md:text-[18px] text-[#333333] leading-relaxed font-['Hind',sans-serif]">
                     {s.description}
                   </p>
                 </div>
