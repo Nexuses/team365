@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 const LOGO_URL =
   "https://nexuses.s3.us-east-2.amazonaws.com/logo-nobg-1.png";
@@ -64,22 +65,18 @@ export function FooterSection() {
               </div>
 
               <div className="flex gap-4 mt-6">
-                <a
-                  href="https://www.team365.co.uk/privacy-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/privacy-policy"
                   className="text-[15px] text-[#555] hover:text-[#9e5f98]"
                 >
                   Privacy Policy
-                </a>
-                <a
-                  href="https://www.team365.co.uk/page-sitemap.xml"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </Link>
+                <Link
+                  href="/sitemap"
                   className="text-[15px] text-[#555] hover:text-[#9e5f98]"
                 >
                   Site Map
-                </a>
+                </Link>
               </div>
             </div>
 
