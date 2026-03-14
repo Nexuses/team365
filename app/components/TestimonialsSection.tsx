@@ -62,7 +62,7 @@ export function TestimonialsSection() {
       <div className="bg-[#231834] pb-22 md:pb-24 lg:pb-28 pt-10 md:pt-12">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid md:grid-cols-[1fr_1.35fr] gap-10 md:gap-14 items-start">
-            <h2 className="text-[30px] md:text-[34px] leading-tight font-semibold !text-white font-['Hind',sans-serif]">
+            <h2 className="text-[30px] md:text-[34px] leading-tight font-semibold !text-[#8d4f92] font-['Hind',sans-serif]">
               team365 ... We Deliver.
             </h2>
             <div className="!text-white font-['Hind',sans-serif] space-y-2">

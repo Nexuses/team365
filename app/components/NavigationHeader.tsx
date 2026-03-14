@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -13,19 +15,19 @@ const TEXT_COLOR = "#171717";
 interface NavItem {
   label: string;
   href: string;
-  isActive?: boolean;
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#top", isActive: true },
-  { label: "Testimonials", href: "#testimonial" },
-  { label: "Services", href: "#service" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/#top" },
+  { label: "Testimonials", href: "/#testimonial" },
+  { label: "Services", href: "/#service" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 export const NavigationHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +40,7 @@ export const NavigationHeader = () => {
   return (
     <header
       className={cn(
-        "relative w-full z-50 transition-all duration-300 bg-white",
+        "relative w-full z-50 transition-all duration-300 bg-white shadow-sm",
         scrolled ? "py-2" : "py-4"
       )}
     >
@@ -46,7 +48,7 @@ export const NavigationHeader = () => {
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex-shrink-0 pt-[20px] -mt-[10px]">
-            <a href="/" className="block">
+            <Link href="/" className="block">
               <img
                 src={LOGO_URL}
                 alt="Team 365 Logo"
@@ -56,18 +58,20 @@ export const NavigationHeader = () => {
                     "https://via.placeholder.com/276x56?text=Team365";
                 }}
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-2">
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.map((item) => {
+              const isActive = pathname === "/" && item.href === "/#top";
+              return (
               <div key={item.label} className="relative group px-4 py-2">
-                <a
+                <Link
                   href={item.href}
                   className={cn(
                     "text-[21px] font-medium transition-colors duration-300 relative z-10",
-                    item.isActive
+                    isActive
                       ? "text-[#171717]"
                       : "text-[#171717] hover:text-[#9e5f98]"
                   )}
@@ -77,13 +81,13 @@ export const NavigationHeader = () => {
                     <span
                       className={cn(
                         "absolute -bottom-1 left-0 w-full h-[1.4px] bg-[#9e5f98] origin-left transition-transform duration-300",
-                        item.isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                        isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       )}
                     />
                   </span>
-                </a>
+                </Link>
               </div>
-            ))}
+            )})}
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -105,24 +109,26 @@ export const NavigationHeader = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
+            className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 overflow-hidden shadow-lg"
           >
             <div className="container mx-auto px-4 py-4 space-y-2">
-              {NAV_ITEMS.map((item) => (
-                <a
+              {NAV_ITEMS.map((item) => {
+                const isActive = pathname === "/" && item.href === "/#top";
+                return (
+                <Link
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
                     "block px-4 py-3 text-lg font-medium transition-colors duration-200 rounded-md",
-                    item.isActive
+                    isActive
                       ? "text-white bg-[#9e5f98]"
                       : "text-[#171717] hover:bg-gray-50 hover:text-[#9e5f98]"
                   )}
                 >
                   {item.label}
-                </a>
-              ))}
+                </Link>
+              )})}
             </div>
           </motion.div>
         )}
