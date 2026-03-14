@@ -26,7 +26,7 @@ export default function SiteMap() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-[17px]">
           <div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#8d4f92] mb-6 pb-2 border-b border-gray-100">Pages</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#2f1d3d] mb-6 pb-2 border-b border-gray-100">Pages</h2>
             <ul className="space-y-4">
               {pages.map((page) => (
                 <li key={page.name}>
@@ -43,7 +43,7 @@ export default function SiteMap() {
           </div>
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#8d4f92] mb-6 pb-2 border-b border-gray-100">Home Sections</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#2f1d3d] mb-6 pb-2 border-b border-gray-100">Home Sections</h2>
             <ul className="space-y-4">
               {sections.map((section) => (
                 <li key={section.name}>

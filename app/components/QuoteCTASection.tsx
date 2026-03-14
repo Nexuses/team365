@@ -20,7 +20,7 @@ export function QuoteCTASection() {
 
       <div className="relative z-10 container mx-auto px-6 md:px-8 lg:px-12 h-full min-h-[360px] md:min-h-[430px] flex items-center">
         <div className="w-full max-w-[320px] md:max-w-[460px] bg-white rounded-xl px-6 md:px-8 py-6 md:py-7 shadow-2xl">
-          <h4 className="text-[18px] md:text-[30px] leading-tight font-semibold text-[#8d4f92] text-center mb-4">
+          <h4 className="text-[18px] md:text-[30px] leading-tight font-semibold text-[#2f1d3d] text-center mb-4">
             Please Call For A Quote
           </h4>
           <p className="text-[13px] md:text-[18px] leading-[1.5] text-[#2d2d2d] text-center mb-5">
