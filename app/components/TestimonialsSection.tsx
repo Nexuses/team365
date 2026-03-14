@@ -95,7 +95,7 @@ export function TestimonialsSection() {
                   className="bg-white rounded-xl shadow-xl h-[280px] md:h-[320px] overflow-hidden p-6 md:p-8"
                 >
                   <div className="flex items-start justify-between gap-4 mb-3">
-                    <h5 className="text-[21px] md:text-[23px] leading-tight font-medium text-[#202020] font-['Hind',sans-serif]">
+                    <h5 className="text-[21px] md:text-[23px] leading-tight font-medium !text-[#2f1d3d] font-['Hind',sans-serif]">
                       {TESTIMONIALS[cardIndex].author}
                     </h5>
                     <ul className="flex gap-1 text-[#9e5f98] pt-1">
@@ -107,7 +107,7 @@ export function TestimonialsSection() {
                     </ul>
                   </div>
 
-                  <blockquote className="mt-2 text-[18px] md:text-[19px] leading-relaxed text-[#8c8c97] italic font-['Hind',sans-serif]">
+                  <blockquote className="mt-2 text-[18px] md:text-[19px] leading-relaxed !text-gray-600 italic font-['Hind',sans-serif]">
                     {TESTIMONIALS[cardIndex].quote}
                   </blockquote>
                 </article>
@@ -130,7 +130,7 @@ export function TestimonialsSection() {
                     className="w-[48%] flex-none bg-white rounded-xl shadow-xl h-[320px] overflow-hidden p-8"
                   >
                     <div className="flex items-start justify-between gap-4 mb-3">
-                      <h5 className="text-[24px] leading-tight font-medium text-[#202020] font-['Hind',sans-serif]">
+                      <h5 className="text-[24px] leading-tight font-medium !text-[#2f1d3d] font-['Hind',sans-serif]">
                         {TESTIMONIALS[cardIndex].author}
                       </h5>
                       <ul className="flex gap-1 text-[#9e5f98] pt-1">
@@ -142,7 +142,7 @@ export function TestimonialsSection() {
                       </ul>
                     </div>
 
-                    <blockquote className="mt-2 text-[19px] leading-relaxed text-[#8c8c97] italic font-['Hind',sans-serif]">
+                    <blockquote className="mt-2 text-[19px] leading-relaxed !text-gray-600 italic font-['Hind',sans-serif]">
                       {TESTIMONIALS[cardIndex].quote}
                     </blockquote>
                   </article>
