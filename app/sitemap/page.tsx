@@ -18,22 +18,23 @@ export default function SiteMap() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pt-32 lg:pt-40">
-      <div className="container mx-auto px-6 md:px-8 lg:px-12 max-w-[1280px] flex-grow pb-16">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-[#2f1d3d] font-hind">
+    <div className="min-h-screen flex flex-col pt-32 lg:pt-40 bg-white">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 max-w-[1000px] flex-grow pb-24">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 text-[#2f1d3d] font-hind">
           Site Map
         </h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-[16px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-[17px]">
           <div>
-            <h2 className="text-2xl font-semibold text-[#8d4f92] mb-6">Pages</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#8d4f92] mb-6 pb-2 border-b border-gray-100">Pages</h2>
             <ul className="space-y-4">
               {pages.map((page) => (
                 <li key={page.name}>
                   <Link 
                     href={page.href}
-                    className="text-[#555] hover:text-[#8d4f92] font-medium text-lg transition-colors"
+                    className="text-gray-600 hover:text-[#8d4f92] font-medium text-lg transition-colors flex items-center"
                   >
+                    <span className="w-2 h-2 rounded-full bg-gray-200 mr-3"></span>
                     {page.name}
                   </Link>
                 </li>
@@ -42,14 +43,15 @@ export default function SiteMap() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-[#8d4f92] mb-6">Home Sections</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#8d4f92] mb-6 pb-2 border-b border-gray-100">Home Sections</h2>
             <ul className="space-y-4">
               {sections.map((section) => (
                 <li key={section.name}>
                   <Link 
                     href={section.href}
-                    className="text-[#555] hover:text-[#8d4f92] font-medium text-lg transition-colors"
+                    className="text-gray-600 hover:text-[#8d4f92] font-medium text-lg transition-colors flex items-center"
                   >
+                    <span className="w-2 h-2 rounded-full bg-gray-200 mr-3"></span>
                     {section.name}
                   </Link>
                 </li>
